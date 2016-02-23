@@ -52,8 +52,10 @@ function daysInMonth(month) {
   }
 }
 
-
+//***************************************************************************
 //THE KEYWORD "RETURN"
+//***************************************************************************
+
 
 // We have now seen functions that take a set of inputs as parameters. 
 // It is also often desireable to return an value from the function. 
@@ -151,3 +153,29 @@ calculate(12, 4, "-"); //Returns 8
 calculate(12, 4, "*"); //Returns 48
 calculate(12, 4, "/"); //Returns 3
 calculate(12, 4, "."); //Returns "This is not a valid operator"
+
+
+//***************************************************************************
+//The keyword arguments
+//***************************************************************************
+
+// EXERCISE
+
+// When should you use the var keyword to declare variables? ALWAYS
+// What does the following code console log?
+
+var test = 10;
+function scopeChallenge() {
+  console.log(test);
+  var test = 99;
+}
+
+scopeChallenge(); // Will return 99, because variables inside functions get
+//"hoisted" to the top of the code. So it really looks like:
+
+var test = 10;
+function scopeChallenge() {
+  var test;
+  console.log(test);
+  test = 99;
+}
